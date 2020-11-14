@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Login {
+public class Login extends BasePage {
 
     @FindBy(id = "prependedInput")
     private WebElement username;
@@ -25,5 +25,6 @@ public class Login {
         username.sendKeys(usernameValue);
         password.sendKeys(passwordValue + Keys.ENTER);
     }
+
 
 }
