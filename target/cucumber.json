@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-11-14T23:23:26.539Z",
+        "start_timestamp": "2020-11-14T23:48:27.299Z",
         "before": [
           {
             "result": {
-              "duration": 2000000,
+              "duration": 3000000,
               "status": "passed"
             },
             "match": {
@@ -45,32 +45,22 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "status": "passed"
             },
             "line": 7,
             "name": "user logs in as a store manager",
-            "match": {},
+            "match": {
+              "location": "com.vytrack.step_definitions.Create_Events_Calender_Definitions.user_logs_in_as_a_store_manager()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "undefined"
             },
             "line": 8,
             "name": "the user navigates to \"Activities\" and \"Calendar Event\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Activities\"",
-                  "offset": 22
-                },
-                {
-                  "val": "\"Calendar Event\"",
-                  "offset": 39
-                }
-              ],
-              "location": "com.vytrack.step_definitions.Create_Events_Calender_Definitions.the_user_navigates_to_and(java.lang.String,java.lang.String)"
-            },
+            "match": {},
             "keyword": "And "
           },
           {
