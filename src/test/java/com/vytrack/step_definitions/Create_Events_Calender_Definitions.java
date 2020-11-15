@@ -1,24 +1,33 @@
 package com.vytrack.step_definitions;
 
+import com.vytrack.pages.Create_Calender_Pages;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
-public class Create_Events_Calender_Definitions {
-    @Given("the user navigates to {string} and {string}")
-    public void the_user_navigates_to_and(String string, String string2) {
+import java.util.Map;
 
-    }
+public class Create_Events_Calender_Definitions {
+    Create_Calender_Pages calender = new Create_Calender_Pages();
+
+
 
     @Given("user clicks on create calendar event button")
     public void user_clicks_on_create_calendar_event_button() {
+        calender.clickOnCreateCalendarEvent();
+
 
     }
     @When("user adds new calendar event information")
-    public void user_adds_new_calendar_event_information() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_adds_new_calendar_event_information(Map<String, String> data) {
 
+        String title = data.get("Title");
+        String description = data.get("Description");
+
+        calender.enterDescription(description);
+        calender.enterTitle(title);
 
     }
+
+
 
 }

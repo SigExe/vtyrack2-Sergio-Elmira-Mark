@@ -8,11 +8,18 @@ import io.cucumber.java.en.When;
 public class Common_Step_Definitions {
     BasePage basePage = new Login();
 
-    @Given("user navigates to {string} and {string}")
+    @Given("the user navigates to {string} and {string}")
     public void user_navigates_to_and(String string, String string2) {
         basePage.navigateTo(string, string2);
     }
 
+    /* @Given("the user navigates to {string} and {string}")
+    public void the_user_navigates_to_and(String string, String string2) {
+
+
+    }
+
+    */
     @When("user clicks on save and close button")
     public void user_clicks_on_save_and_close_button() {
         basePage.clickSaveAndClose();
