@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-11-14T23:23:26.539Z",
+        "start_timestamp": "2020-11-15T00:35:10.218Z",
         "before": [
           {
             "result": {
@@ -15,10 +15,10 @@
             }
           }
         ],
-        "line": 5,
-        "name": "Create calendar event with the default time",
+        "line": 15,
+        "name": "Verify view,edit and delete options are displayed",
         "description": "",
-        "id": "as-a-user-i-want-to-be-able-to-create-calendar-events;create-calendar-event-with-the-default-time",
+        "id": "as-a-user-i-want-to-be-able-to-create-calendar-events;verify-view-edit-and-delete-options-are-displayed",
         "after": [
           {
             "result": {
@@ -36,7 +36,7 @@
             "result": {
               "status": "passed"
             },
-            "line": 6,
+            "line": 16,
             "name": "user is on the login page",
             "match": {
               "location": "com.vytrack.step_definitions.Login_Step_Definitions.user_is_on_the_login_page()"
@@ -45,18 +45,20 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "status": "passed"
             },
-            "line": 7,
-            "name": "user logs in as a store manager",
-            "match": {},
+            "line": 17,
+            "name": "user logs in",
+            "match": {
+              "location": "com.vytrack.step_definitions.Login_Step_Definitions.user_logs_in()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
-            "line": 8,
+            "line": 18,
             "name": "the user navigates to \"Activities\" and \"Calendar Event\"",
             "match": {
               "arguments": [
@@ -69,32 +71,32 @@
                   "offset": 39
                 }
               ],
-              "location": "com.vytrack.step_definitions.Create_Events_Calender_Definitions.the_user_navigates_to_and(java.lang.String,java.lang.String)"
+              "location": "com.vytrack.step_definitions.Common_Step_Definitions.user_navigates_to_and(java.lang.String,java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "undefined"
             },
-            "line": 9,
-            "name": "user clicks on create calendar event button",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 10,
-            "name": "user adds new calendar event information",
+            "line": 19,
+            "name": "user clicks on \"actions\"",
             "match": {},
             "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 20,
+            "name": "user should verify that view, edit and delete are displayed",
+            "match": {},
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@smoke"
+            "name": "@testcase1"
           }
         ]
       }

@@ -14,8 +14,9 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/features"
         },
         glue = "com/vytrack/step_definitions",
-        dryRun = true,
-        tags ="@smoke"
+        dryRun = false,
+        tags ="@testcase1",
+        publish = true
 
 )
 

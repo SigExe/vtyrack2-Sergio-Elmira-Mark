@@ -19,6 +19,12 @@ public class Create_Calender_Pages extends BasePage{
     @FindBy(id = "tinymce")
     private WebElement descriptionInputBox;
 
+    @FindBy(css = "[class='btn-success btn dropdown-toggle']")
+    private WebElement ExpandMenuBtn;
+    @FindBy(xpath = "//ul[@data-options='{\"align\": \"right\", \"attachToParent\": \"true\"}']")
+    private WebElement SaveNewClose;
+
+
     public void enterTitle(String text) {
         BrowserUtils.enterText(titleInputBox, text);
     }
@@ -46,5 +52,15 @@ public class Create_Calender_Pages extends BasePage{
         WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
         return element.getText().trim();
     }
+
+
+
+    public void Expand_manu(){
+        ExpandMenuBtn.click();
+    }
+  public void verify_Save_And_Close_and_Save_New_andSave(){
+SaveNewClose.isDisplayed();
+
+  }
 
 }
